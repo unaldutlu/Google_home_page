@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+#header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-right: 1.8rem;
+}
+#header a {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  line-height: 24px;
+  margin-right: 1.2rem;
+  text-decoration: none;
+}
+#header a:hover {
+  text-decoration: underline;
+}
+#header .apps {
+  width: 1.5rem;
+  margin-right: 1.2rem;
+  color: #5f6368;
+  opacity: 0.7;
+}
+#header .apps:hover {
+  background-color: #3c404314;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#header .sign_in {
+  background-color: #1a73e8;
+  width: 96px;
+  height: 36px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+#header .sign_in:hover {
+  box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%);
+  cursor: pointer;
+  background-color: #2b7de9;
+  transition: box-shadow 250ms;
+}
