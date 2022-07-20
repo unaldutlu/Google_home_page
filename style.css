@@ -47,3 +47,68 @@
   background-color: #2b7de9;
   transition: box-shadow 250ms;
 }
+#google{
+  margin-top: 100px;
+}
+#google .google_icon{
+  text-align: center;
+}
+#google .google_input{
+  width: 582px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+}
+#google .google_input .i_google{
+  width: 100%;
+  display: block;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.87); 
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 15px;
+  padding-left: 45px;
+  padding-right: 90px;
+  outline: none;
+}
+#google .google_input .i_google:hover{
+  box-shadow: 1px 1px 5px #30343614;
+}
+#google .google_input .s_icon{
+  position: absolute;
+  width: 20px;
+  opacity: 0.3;
+  top: 15px;
+  left: 15px;
+}
+#google .google_input .k_icon{
+  position: absolute;
+  width: 24px;
+  top: 19px;
+  right: 54px;
+  cursor: pointer;
+}
+#google .google_input .mic_icon{
+  position: absolute;
+  width: 33px;
+  top: 8px;
+  right: 11px;
+  cursor: pointer;
+}
+#google .google_input button{
+  background-color: #f8f9fa;
+  color: #3c4043;
+  border: 1px solid transparent;
+  padding: 9px 16px;
+  border-radius: 4px;
+  margin-top: 80px;
+  margin-right: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+#google .google_input button:hover{
+  box-shadow: 1px 1px 5px rgb(133, 133, 133);
+}
