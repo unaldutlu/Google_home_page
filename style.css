@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+body {
+  overflow: auto;
+}
 #header {
   display: flex;
   justify-content: flex-end;
@@ -36,7 +39,7 @@
 #header .sign_in {
   background-color: #1a73e8;
   width: 96px;
-  height: 36px;
+  height: 30px;
   color: #fff;
   border-radius: 5px;
   border: none;
@@ -47,58 +50,64 @@
   background-color: #2b7de9;
   transition: box-shadow 250ms;
 }
-#google{
-  margin-top: 100px;
+#google {
+  margin-top: 170px;
 }
-#google .google_icon{
+#google .google_icon {
   text-align: center;
 }
-#google .google_input{
-  width: 582px;
+#google .google_icon img {
+  width: 272px;
+  height: 92px;
+}
+#google .google_input {
+  display: flex;
+  justify-content: center;
+  max-width: 582px;
   position: relative;
   text-align: center;
   margin: 0 auto;
-  text-align: center;
   margin-top: 15px;
 }
-#google .google_input .i_google{
+#google .google_input .i_google {
   width: 100%;
   display: block;
   position: absolute;
-  color: rgba(0, 0, 0, 0.87); 
+  color: rgba(0, 0, 0, 0.87);
   border: 1px solid #ddd;
   font-size: 14px;
   border-radius: 25px;
   padding: 15px;
   padding-left: 45px;
-  padding-right: 90px;
+  padding-right: 100px;
   outline: none;
 }
-#google .google_input .i_google:hover{
-  box-shadow: 1px 1px 5px #30343614;
+#google .google_input .i_google:hover,
+.i_google:focus {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 }
-#google .google_input .s_icon{
+#google .google_input .s_icon {
   position: absolute;
   width: 20px;
   opacity: 0.3;
   top: 15px;
   left: 15px;
 }
-#google .google_input .k_icon{
+#google .google_input .k_icon {
   position: absolute;
-  width: 24px;
+  width: 21px;
   top: 19px;
-  right: 54px;
+  right: 60px;
   cursor: pointer;
 }
-#google .google_input .mic_icon{
+#google .google_input .mic_icon {
   position: absolute;
   width: 33px;
   top: 8px;
   right: 11px;
   cursor: pointer;
 }
-#google .google_input button{
+#google .google_input button {
   background-color: #f8f9fa;
   color: #3c4043;
   border: 1px solid transparent;
@@ -108,7 +117,123 @@
   margin-right: 5px;
   display: inline-block;
   cursor: pointer;
+  margin-bottom: 200px;
 }
-#google .google_input button:hover{
-  box-shadow: 1px 1px 5px rgb(133, 133, 133);
+#google .google_input button:hover {
+  box-shadow: 0 1px 1pxrgba (0, 0, 0, 0.1);
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+#footer {
+  width: 100%;
+  bottom: 0px;
+  background-color: #f2f2f2;
+  color: #70757a;
+  position: fixed;
+}
+#footer h3 {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  display: block;
+  font-size: 15px;
+  font-weight: 100;
+}
+#footer .footer_google {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 30px;
+}
+#footer a {
+  color: #70757a;
+  text-decoration: none;
+  padding: 20px 30px;
+  padding-right: 0;
+  display: inline-block;
+  font-size: 14px;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+/*---------------------media------------------------*/
+@media screen and (max-width: 1200px) {
+  #footer .footer_google {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 450px) {
+  #footer .footer_google {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 250px) and (max-width: 450px) {
+  #header {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  #header a {
+    font-size: 5px;
+    margin-right: 4px;
+  }
+  #header .apps {
+    width: 10px;
+    margin-right: 4px;
+  }
+  #header .sign_in {
+    font-size: 5px;
+    width: 40px;
+    height: 15px;
+    border-radius: 2px;
+  }
+  #google {
+    margin-top: 80px;
+  }
+  #google .google_icon img {
+    width: 100px;
+    height: 35px;
+  }
+  #google .google_input {
+    margin: 65px;
+    margin-top: 8px;
+  }
+  #google .google_input .i_google {
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 45px;
+    font-size: 8px;
+    height: 20px;
+  }
+  #google .google_input .s_icon {
+    width: 8px;
+    top: 6px;
+    left: 8px;
+  }
+  #google .google_input .k_icon {
+    width: 8px;
+    top: 8px;
+    right: 25px;
+  }
+  #google .google_input .mic_icon {
+    width: 15px;
+    top: 3px;
+    right: 5px;
+  }
+  #google .google_input button {
+    font-size: 6px;
+    padding: 6px 10px;
+    margin-top: 40px;
+    margin-bottom: 2px;
+  }
+  #footer h3 {
+    padding: 3px 6px;
+    font-size: 6px;
+  }
+  #footer a {
+    padding: 10px 5px;
+    padding-right: 0;
+    font-size: 6px;
+  }
+  #footer .footer_google {
+    justify-content: space-around;
+  }
 }
