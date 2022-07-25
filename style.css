@@ -328,3 +328,14 @@
     justify-content: space-around;
   }
 }
+/*-----------------@media------------------*/
+@media screen and (min-height: 450px) and (max-height: 850px) {
+  #google {
+    margin-top: 150px;
+  }
+}
+@media screen and (max-height: 350px) {
+  #footer {
+    display: none;
+  }
+}
