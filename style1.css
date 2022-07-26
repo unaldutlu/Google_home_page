@@ -4,11 +4,13 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 #main {
   overflow: auto;
   width: 100%;
   height: 100%;
 }
+
 #header {
   display: flex;
   justify-content: flex-end;
@@ -16,6 +18,7 @@
   margin-top: 0.6rem;
   margin-right: 0.9rem;
 }
+
 #header a {
   display: inline-block;
   color: rgba(0, 0, 0, 0.87);
@@ -24,20 +27,24 @@
   margin-right: 1.2rem;
   text-decoration: none;
 }
+
 #header a:hover {
   text-decoration: underline;
 }
+
 #header .apps {
   width: 1.5rem;
   margin-right: 1.2rem;
   color: #5f6368;
   opacity: 0.7;
 }
+
 #header .apps:hover {
   background-color: #3c404314;
   border-radius: 50%;
   cursor: pointer;
 }
+
 #header .sign_in {
   background-color: #1a73e8;
   width: 96px;
@@ -46,22 +53,27 @@
   border-radius: 5px;
   border: none;
 }
+
 #header .sign_in:hover {
   box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%);
   cursor: pointer;
   background-color: #2b7de9;
   transition: box-shadow 250ms;
 }
+
 #google {
   margin-top: 220px;
 }
+
 #google .google_icon {
   text-align: center;
 }
+
 #google .google_icon img {
   width: 272px;
   height: 92px;
 }
+
 #google .google_input {
   display: flex;
   justify-content: center;
@@ -71,6 +83,7 @@
   margin: 0 auto;
   margin-top: 15px;
 }
+
 #google .google_input .i_google {
   width: 100%;
   display: block;
@@ -84,10 +97,12 @@
   padding-right: 100px;
   outline: none;
 }
+
 #google .google_input .i_google:hover,
 .i_google:focus {
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 }
+
 #google .google_input .s_icon {
   position: absolute;
   width: 20px;
@@ -95,6 +110,7 @@
   top: 15px;
   left: 15px;
 }
+
 #google .google_input .k_icon {
   position: absolute;
   width: 21px;
@@ -102,6 +118,7 @@
   right: 60px;
   cursor: pointer;
 }
+
 #google .google_input .mic_icon {
   position: absolute;
   width: 33px;
@@ -109,6 +126,7 @@
   right: 11px;
   cursor: pointer;
 }
+
 #google .google_input button {
   background-color: #f8f9fa;
   color: #3c4043;
@@ -120,11 +138,13 @@
   display: inline-block;
   cursor: pointer;
 }
+
 #google .google_input button:hover {
   box-shadow: 0 1px 1pxrgba (0, 0, 0, 0.1);
   border: 1px solid #dadce0;
   color: #202124;
 }
+
 #language {
   color: #4d5156;
   text-align: center;
@@ -132,12 +152,15 @@
   line-height: 24px;
   font-size: small;
 }
+
 #language a {
   text-decoration: none;
 }
+
 #language a:hover {
   text-decoration: underline;
 }
+
 #footer {
   width: 100%;
   bottom: 0px;
@@ -145,6 +168,7 @@
   color: #70757a;
   position: fixed;
 }
+
 #footer h3 {
   padding: 15px 30px;
   border-bottom: 1px solid #dadce0;
@@ -153,12 +177,15 @@
   font-weight: 100;
   color: #70757a;
 }
+
 #footer .footer_google {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   margin-right: 30px;
 }
+
 #footer a {
   color: #70757a;
   text-decoration: none;
@@ -167,50 +194,108 @@
   display: inline-block;
   font-size: 14px;
 }
+
 #footer a:hover {
   text-decoration: underline;
 }
+
+#footer .footer_3 img {
+  width: 14px;
+  margin-right: 6px;
+  margin-left: 30px;
+}
+
+#footer .footer_3 a {
+  font-size: 14px;
+  color: #70757a;
+  padding: 20px 0px;
+}
+
+#footer .footer_3 a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 /*---------------------media------------------------*/
+
+@media screen and (min-width: 1200px) {
+  #footer .footer_google {
+    margin-right: 0;
+  }
+
+  .footer_3 {
+    flex-grow: 5;
+  }
+
+  .footer_1 {
+    flex-grow: 3.4;
+  }
+
+  .footer_2 {
+    flex-grow: 0.3;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #footer .footer_google {
     justify-content: space-evenly;
   }
 }
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 678px) {
+  .footer_3 a {
+    order: 1;
+  }
+
+  .footer_1 {
+    order: 2;
+  }
+
+  .footer_2 {
+    order: 3;
+  }
+
   #footer .footer_google {
-    justify-content: space-between;
+    align-content: space-between;
   }
 }
+
 @media screen and (min-width: 250px) and (max-width: 450px) {
   #header {
     margin-top: 6px;
     margin-right: 9px;
   }
+
   #header a {
     font-size: 11px;
     margin-right: 10px;
   }
+
   #header .apps {
     width: 19px;
     margin-right: 8px;
   }
+
   #header .sign_in {
     font-size: 11px;
     width: 65px;
     height: 24px;
     border-radius: 2px;
   }
+
   #google {
     margin-top: 80px;
   }
+
   #google .google_icon img {
     width: 160px;
     height: 55px;
   }
+
   #google .google_input {
     margin: 0px 20px;
     margin-top: 8px;
   }
+
   #google .google_input .i_google {
     padding: 5px;
     padding-left: 38px;
@@ -218,73 +303,100 @@
     font-size: 11px;
     height: 40px;
   }
+
   #google .google_input .s_icon {
     width: 16px;
     top: 12px;
     left: 13px;
   }
+
   #google .google_input .k_icon {
     width: 15px;
     top: 15px;
     right: 42px;
   }
+
   #google .google_input .mic_icon {
     width: 28px;
     top: 5px;
     right: 9px;
   }
+
   #google .google_input button {
     font-size: 10px;
     padding: 8px 13px;
     margin-top: 68px;
   }
+
   #language {
     margin-top: 15px;
     font-size: 10px;
   }
+
   #footer h3 {
     padding: 6px 7px;
     font-size: 11px;
   }
+
   #footer a {
     padding: 14px;
     padding-right: 0;
     font-size: 10px;
   }
+
   #footer .footer_google {
     justify-content: space-around;
   }
+
+  #footer .footer_3 img {
+    width: 10px;
+    margin-right: 1px;
+  }
+
+  #footer .footer_3 a {
+    font-size: 10px;
+    color: #70757a;
+    padding: 14px 0px;
+  }
 }
+
 /*-----------------@media-------------------*/
 @media screen and (max-height: 450px) {
   #header {
     margin-top: 6px;
     margin-right: 9px;
   }
+
   #header a {
     font-size: 11px;
     margin-right: 10px;
   }
+
   #header .apps {
     width: 19px;
     margin-right: 8px;
   }
+
   #header .sign_in {
     font-size: 11px;
     width: 65px;
     height: 24px;
     border-radius: 2px;
   }
+
   #google {
     margin-top: 40px;
   }
+
   #google .google_icon img {
     width: 160px;
     height: 55px;
   }
+
   #google .google_input {
     margin-top: 8px;
   }
+
   #google .google_input .i_google {
     padding: 5px;
     padding-left: 38px;
@@ -292,50 +404,71 @@
     font-size: 11px;
     height: 40px;
   }
+
   #google .google_input .s_icon {
     width: 16px;
     top: 12px;
     left: 13px;
   }
+
   #google .google_input .k_icon {
     width: 15px;
     top: 15px;
     right: 42px;
   }
+
   #google .google_input .mic_icon {
     width: 28px;
     top: 5px;
     right: 9px;
   }
+
   #google .google_input button {
     font-size: 10px;
     padding: 8px 13px;
     margin-top: 68px;
   }
+
   #language {
     margin-top: 15px;
     font-size: 10px;
   }
+
   #footer h3 {
     padding: 6px 14px;
     font-size: 11px;
   }
+
   #footer a {
     padding: 14px;
     padding-right: 0;
     font-size: 10px;
   }
+
   #footer .footer_google {
     justify-content: space-around;
   }
+
+  #footer .footer_3 img {
+    width: 10px;
+    margin-right: 1px;
+  }
+
+  #footer .footer_3 a {
+    font-size: 10px;
+    color: #70757a;
+    padding: 14px 0px;
+  }
 }
+
 /*-----------------@media------------------*/
 @media screen and (min-height: 450px) and (max-height: 850px) {
   #google {
     margin-top: 150px;
   }
 }
-@media screen and (max-height: 250px) {
+
+@media screen and (max-height: 350px) {
   #footer {
     display: none;
   }
